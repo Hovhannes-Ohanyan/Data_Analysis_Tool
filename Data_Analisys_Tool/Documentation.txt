@@ -1,0 +1,79 @@
+# Data Analysis and Visualization Tool
+
+This tool is designed to load, analyze, and visualize data from various sources. It provides a command-line interface (CLI) for user interaction.
+
+## Features
+
+1. **Data Loading**: Load data from CSV files, Excel files, and PNG images containing tabular data.
+2. **Data Analysis**: Calculate mean, standard deviation, median, correlation, variance, quartiles, mode, and perform log transformations.
+3. **Data Visualization**: Create a wide range of data visualizations, including histograms, scatter plots, line plots, bar charts, pie charts, heatmaps, pair plots, violin plots, density plots, and more.
+
+## DataSet Class
+
+The `DataSet` class is responsible for loading and storing data from various sources.
+
+### Methods:
+
+- `load_data_from_csv(file_path: str)`: Load data from a CSV file into the dataset.
+- `load_data_from_excel(file_path: str, sheet_name: str)`: Load data from an Excel file into the dataset.
+- `load_data_from_png(image_path: str)`: Load data from a PNG image containing tabular data using OCR.
+- `list_files(directory_path: str)`: List files in a directory.
+- `get_column_names()`: Get the column names of the loaded dataset.
+
+## DataAnalyzer Class
+
+The `DataAnalyzer` class provides methods for analyzing data in the dataset.
+
+### Methods:
+
+- `calculate_mean(column_name: str)`: Calculate the mean of a specified column in the dataset.
+- `calculate_standard_deviation(column_name: str)`: Calculate the standard deviation of a specified column in the dataset.
+- `calculate_median(column_name: str)`: Calculate the median of a specified column in the dataset.
+- `calculate_correlation(column1: str, column2: str)`: Calculate the correlation between two columns in the dataset.
+- `calculate_variance(column_name: str)`: Calculate the variance of a specified column in the dataset.
+- `calculate_quartiles(column_name: str)`: Calculate the quartiles (25th, 50th, and 75th percentiles) of a specified column.
+- `calculate_mode(column_name: str)`: Calculate the mode of a specified column in the dataset.
+- `log_transform(column_name: str)`: Apply a natural logarithm (log) transformation to a specified column.
+- `calculate_log_sum(column_name: str)`: Calculate the sum of logarithms of values in a specified column.
+- `calculate_geometric_mean(column_name: str)`: Calculate the geometric mean of a specified column in the dataset.
+
+## Visualization Class
+
+The `Visualization` class provides methods for visualizing the dataset.
+
+### Methods:
+
+(Note: The following methods are available for data visualization. The parameters vary based on the specific visualization type.)
+
+- `plot_histogram(column_name)`: Create a histogram plot.
+- `scatter_plot(x_column, y_column)`: Create a scatter plot.
+- `line_plot(x_column, y_column)`: Create a line plot.
+- `bar_chart(x_column, y_column, hue_column=None, stacked=False)`: Create a bar chart.
+- `pie_chart(column_name)`: Create a pie chart.
+- `heatmap()`: Create a heatmap.
+- `pair_plot(columns)`: Create a pair plot.
+- `violin_plot(x_column, y_column)`: Create a violin plot.
+- `density_plot(column_name)`: Create a density plot.
+- `bar_plot(x_column, y_column, hue_column=None, stacked=False)`: Create a bar plot.
+- `time_series_plot(x_column, y_column)`: Create a time series plot.
+- `scatter_3d_plot(x_column, y_column, z_column)`: Create a 3D scatter plot.
+- `pairwise_scatter_matrix(columns)`: Create a grid of scatter plots.
+- `boxen_plot(x_column, y_column)`: Create a boxen plot.
+
+## Command-Line Interface
+
+The code provides a command-line interface (CLI) to interact with the `DataSet`, `DataAnalyzer`, and `Visualization` classes. The CLI allows users to load data, analyze data, and visualize data from various sources.
+
+- `main()`: The main function that drives the CLI menu and user interactions.
+
+## Project Usage
+
+### How to Use
+
+1. Clone or download this repository to your local machine.
+
+2. Ensure you have Python installed on your system.
+
+3. Install the required libraries by running the following command:
+
+   pip install pandas numpy matplotlib seaborn pytesseract pillow
